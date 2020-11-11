@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    background-color: black;
+  }
+.child {
+  position: absolute;
+  top: 0;
+}
+
+.child-1 {
+  left: 0;
+}
+
+.child-2 {
+  left: 150px;
+}
+
+.child-3 {
+  left: 300px;
+}
+
+.child-4 {
+  left: 450px;
+}
+
+.child-5 {
+  left: 600px;
+}
+
+.parent {
+  position: relative;
+}
+.card {
+  transition: 0.3s;
+  width: 83%;
+}
+.card:hover {
+  transition: 0.3s;
+  width: 80%;
+}
+.card:active {
+  transition: 0.3s;
+  width: 80%;
+  z-index: 1;
+  position: relative;
+  left: 2%;
+}
+.active{
+  transition: 0.3s;
+  width: 80%;
+  z-index: 1;
+  position: relative;
+  left: 2%;
+}
+
+.container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin: 10px;
+  padding: 16px;
+  background-color: transparent;
+  color: white;
+}
+
+.container:hover {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin: 10px;
+  padding: 16px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid darkgrey;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #40E0D0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #236358;
+}
+
+form {
+  border-radius: 5px;
+  background-color: darkgrey;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<div id="parent" class="parent">
+  <div class="card child-1 child">
+    <img src="./universe1.jpg" alt="Avatar" style="width:100%" onclick="displayContent()">
+    <div class="container">
+      <h4><b>HOME</b></h4> 
+      <p>Architect & Engineer</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+    </div>
+  </div>
+  
+  <div class="card child-2 child">
+    <video class="video-sample" autoplay loop muted style="width:100%" onclick="displayContent()">
+      <source src="./vid1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <h4><b>About Us</b></h4> 
+      <p>Who we are and what we are?</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+    </div>
+  </div>
+
+  <div class="card child-3 child">
+    <img src="./universe3.jpg" alt="Avatar" style="width:100%" onclick="displayContent()">
+    <div class="container">
+      <h4><b>Porfiling</b></h4> 
+      <p>Join US Today</p> 
+      <p>Who we are and what we are?</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p>
+    </div>
+  </div>
+
+  <div class="card child-4 child">
+    <video class="video-sample" autoplay loop muted style="width:100%" onclick="displayContent()">
+      <source src="./vid2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <h4><b>Thank you Card</b></h4> 
+      <p>To Mr/Mrs</p> 
+      <p>Who we are and what we are?</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p> 
+      <p>Some text and description is written here for show only</p>
+    </div>
+  </div>
+
+  <div class="card child-5 child">
+    <img src="./universe2.jpg" alt="Avatar" style="width:100%" onclick="displayContent()">
+    <div class="container">
+      <h4><b>Notification</b></h4> 
+      <form>
+        <label for="fname">First Name</label>
+        <input class="input-field" type="text" id="fname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input class="input-field" type="text" id="lname" placeholder="Your last name..">
+      
+        <label for="lname">Email</label>
+        <input class="input-field" type="text" id="email" placeholder="Your email address..">
+        
+        <label for="country">Country</label>
+        <select class="input-field" id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      
+        <input class="submit-button popup" type="submit" value="Submit" disabled>
+          <span class="popuptext" id="myPopup">Button is disabled</span>
+        </input>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// function displayContent() {
+//   var header = document.getElementById("parent");
+//   var slides = header.getElementsByClassName("card");
+//   for (var i = 0; i < slides.length; i++) {
+//       slides[i].addEventListener("click", function() {
+//       var current = document.getElementsByClassName("active");
+//       if(current[0]) {
+//         current[0].className = current[0].className.replace(" active", "");
+//       }
+//       console.log(this.classList);
+//       if(this.classList.contains("active")){
+//         console.log(this.classList.remove("active"));
+//         this.classList.remove("active");
+//       }else{
+//         this.className += " active";
+//       }
+//       console.log(this.classList);
+//       // this.className += " active";
+//     });
+//   }
+// }
+</script>
+</body>
+</html> 
